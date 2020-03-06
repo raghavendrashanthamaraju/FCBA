@@ -1,2 +1,9 @@
 Important steps are recorded here in this file.
-
+1.commented upgradednetwrok function in byfn.sh
+2.copy all the template files
+things to remember -7/03/2020
+1.chaincode path
+2.couchdb and ca containers
+3.commercial comparision
+4.admin and user registration
+5.smartcontracts logic
