@@ -7,3 +7,5 @@ things to remember -7/03/2020
 3.commercial comparision
 4.admin and user registration
 5.smartcontracts logic
+things on 8/03/2020
+where the hell couchdb is present???
