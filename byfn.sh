@@ -497,7 +497,7 @@ SYS_CHANNEL="byfn-sys-channel"
 CHANNEL_NAME="mychannel"
 # use this as the default docker-compose yaml definition
 COMPOSE_FILE=docker-compose-cli.yaml
-#
+COMPOSE_PROJECT_NAME=fcba
 COMPOSE_FILE_COUCH=docker-compose-couch.yaml
 # org3 docker compose file
 # COMPOSE_FILE_ORG3=docker-compose-org3.yaml

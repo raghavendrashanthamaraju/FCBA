@@ -24,9 +24,10 @@ NO_CHAINCODE="$6"
 LANGUAGE=`echo "$LANGUAGE" | tr [:upper:] [:lower:]`
 COUNTER=1
 MAX_RETRY=10
+
 #/opt/gopath/src/github.com/newcc
-CC_SRC_PATH="/opt/gopath/src/github.com/node"
-# CC_SRC_PATH="/opt/gopath/src/github.com/chaincode/chaincode_example02/node/"
+#  CC_SRC_PATH="/opt/gopath/src/github.com/node"
+CC_SRC_PATH="/opt/gopath/src/github.com/hyperledger/fabric/peer/chaincode/"
 
 
 echo "Channel name : "$CHANNEL_NAME
