@@ -27,7 +27,7 @@ MAX_RETRY=10
 
 #/opt/gopath/src/github.com/newcc
 #  CC_SRC_PATH="/opt/gopath/src/github.com/node"
-CC_SRC_PATH="/opt/gopath/src/github.com/hyperledger/fabric/peer/chaincode/"
+CC_SRC_PATH="/opt/gopath/src/github.com/hyperledger/fabric/peer/chaincode_/node/"
 
 
 echo "Channel name : "$CHANNEL_NAME

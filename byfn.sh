@@ -31,6 +31,11 @@
 export PATH=${PWD}/bin:${PWD}:$PATH
 export FABRIC_CFG_PATH=${PWD}
 export VERBOSE=false
+FABRIC_LOGGING_SPEC=info
+
+CORE_CHAINCODE_LOGGING_SHIM=debug
+
+CORE_CHAINCODE_LOGGING_LEVEL=debug
 
 # Print the usage message
 function printHelp() {
