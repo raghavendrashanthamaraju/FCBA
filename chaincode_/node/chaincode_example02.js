@@ -59,7 +59,7 @@ var Chaincode = class {
     }
   }
 
-  async invoke(stub, args) {
+  async invok(stub, args) {
     if (args.length != 3) {
       throw new Error('Incorrect number of arguments. Expecting 3');
     }
