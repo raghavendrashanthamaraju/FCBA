@@ -1,37 +1,27 @@
-# Copyright IBM Corp. All Rights Reserved.
-#
-# SPDX-License-Identifier: Apache-2.0
-#
-
 version: '2'
-
 volumes:
   orderer.example.com:
   peer0.org1.example.com:
   peer1.org1.example.com:
   peer0.org2.example.com:
   peer1.org2.example.com:
-
 networks:
-  byfn:
-
+  fcba:
 services:
-
   orderer.example.com:
     extends:
       file:   base/docker-compose-base.yaml
       service: orderer.example.com
     container_name: orderer.example.com
     networks:
-      - byfn
-
+      - fcba
   peer0.org1.example.com:
     container_name: peer0.org1.example.com
     extends:
       file:  base/docker-compose-base.yaml
       service: peer0.org1.example.com
     networks:
-      - byfn
+      - fcba
 
   peer1.org1.example.com:
     container_name: peer1.org1.example.com
@@ -39,7 +29,7 @@ services:
       file:  base/docker-compose-base.yaml
       service: peer1.org1.example.com
     networks:
-      - byfn
+      - fcba
 
   peer0.org2.example.com:
     container_name: peer0.org2.example.com
@@ -47,16 +37,14 @@ services:
       file:  base/docker-compose-base.yaml
       service: peer0.org2.example.com
     networks:
-      - byfn
-
+      - fcba
   peer1.org2.example.com:
     container_name: peer1.org2.example.com
     extends:
       file:  base/docker-compose-base.yaml
       service: peer1.org2.example.com
     networks:
-      - byfn
-
+      - fcba
   cli:
     container_name: cli
     image: hyperledger/fabric-tools:$IMAGE_TAG
@@ -80,7 +68,7 @@ services:
     command: /bin/bash
     volumes:
         - /var/run/:/host/var/run/
-        - ./chaincode_/:/opt/gopath/src/github.com/hyperledger/fabric/peer/chaincode_/
+        - ./chaincode_/:/opt/gopath/src/github.com/hyperledger/fabric/peer/chaincode/
         - ./crypto-config:/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/
         - ./scripts:/opt/gopath/src/github.com/hyperledger/fabric/peer/scripts/
         - ./channel-artifacts:/opt/gopath/src/github.com/hyperledger/fabric/peer/channel-artifacts
@@ -91,4 +79,4 @@ services:
       - peer0.org2.example.com
       - peer1.org2.example.com
     networks:
-      - byfn
+      - fcba
